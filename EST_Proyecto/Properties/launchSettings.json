@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "EST_Proyecto": {
+      "commandName": "Project"
+    },
+    "Perfil 1": {
+      "commandName": "Project"
+    }
+  }
+}
