@@ -46,9 +46,9 @@
               "Title": "AVLTree.cs",
               "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Tree\\AVLTree.cs",
               "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Tree\\AVLTree.cs",
-              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Tree\\AVLTree.cs",
-              "RelativeToolTip": "EST_Proyecto\\Forms\\Tree\\AVLTree.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAALAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Tree\\AVLTree.cs*",
+              "RelativeToolTip": "EST_Proyecto\\Forms\\Tree\\AVLTree.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAL0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-07T14:55:23.304Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "EST_Proyecto\\Forms\\Tree\\BinaryTree.cs",
               "ViewState": "AgIAAHIAAAAAAAAAAAAqwAIBAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T13:39:53.913Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-04T13:39:53.913Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "EST_Proyecto\\Forms\\Interfaces\\ITree.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T13:26:28.265Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-04T13:26:28.265Z"
             },
             {
               "$type": "Document",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "EST_Proyecto\\Forms\\Nodos\\NodeTree.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T13:31:05.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-04T13:31:05.672Z"
             },
             {
               "$type": "Document",
@@ -101,8 +98,7 @@
               "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "EST_Proyecto\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-16T12:59:22.088Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-03-16T12:59:22.088Z"
             },
             {
               "$type": "Document",
@@ -114,8 +110,7 @@
               "RelativeToolTip": "EST_Proyecto\\Forms\\Estructuras\\LinkedListaStack.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAAAD0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T17:35:31.164Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-12T17:35:31.164Z"
             },
             {
               "$type": "Document",
@@ -127,8 +122,7 @@
               "RelativeToolTip": "EST_Proyecto\\Form1.Designer.cs",
               "ViewState": "AgIAAJwAAAAAAAAAAAAAAKgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T17:33:45.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-12T17:33:45.2Z"
             }
           ]
         }
