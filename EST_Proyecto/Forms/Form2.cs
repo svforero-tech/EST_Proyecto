@@ -15,7 +15,7 @@ namespace EST_Proyecto.Forms
 {
     public partial class Form2 : Form
     {
-         private const int NODE_RADIUS = 25;
+        private const int NODE_RADIUS = 25;
         private const int LEVEL_HEIGHT = 80;
 
         private BinaryTree<int> tree;
@@ -95,14 +95,14 @@ namespace EST_Proyecto.Forms
         private void btnInsert_Click(object sender, EventArgs e)
         {
             int value = int.Parse(txtValue.Text);
-            
+
             if (tree is AVLTree avl)
             {
                 avl.Insert(value);
             }
             else
-            { 
-                tree.Insert(value); 
+            {
+                tree.Insert(value);
             }
 
             _highlighted = null;
@@ -160,7 +160,7 @@ namespace EST_Proyecto.Forms
 
             txtTraversal.Text = traversalResult;
         }
-        
+
 
         private void btnInOrder_Click(object sender, EventArgs e)
         {
@@ -182,7 +182,7 @@ namespace EST_Proyecto.Forms
 
         private void btnHeight_Click(object sender, EventArgs e)
         {
-            lblHeight.Text =  "Height: " + tree.Height();
+            lblHeight.Text = "Height: " + tree.Height();
         }
 
         private void btnCount_Click(object sender, EventArgs e)
@@ -192,12 +192,12 @@ namespace EST_Proyecto.Forms
 
         private void btnMin_Click(object sender, EventArgs e)
         {
-            lblMin.Text =   "Min: " + tree.Min();
+            lblMin.Text = "Min: " + tree.Min();
         }
 
         private void btnMax_Click(object sender, EventArgs e)
         {
-            lblMax.Text =  "Max: " + tree.Max();
+            lblMax.Text = "Max: " + tree.Max();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -237,13 +237,13 @@ namespace EST_Proyecto.Forms
 
             int counter = 0;
 
-            AssignPositions(tree.GetRoot(),ref counter, 50, 70, 50, 0);
+            AssignPositions(tree.GetRoot(), ref counter, 50, 70, 50, 0);
 
             DrawEdges(e.Graphics, tree.GetRoot());
             DrawNodes(e.Graphics, tree.GetRoot());
             if (tree is AVLTree avl)
             {
-                DrawBalanceFactor(e.Graphics,tree.GetRoot(),avl);
+                DrawBalanceFactor(e.Graphics, tree.GetRoot(), avl);
             }
 
 
@@ -305,7 +305,7 @@ namespace EST_Proyecto.Forms
 
             Point p = positions[node];
 
-            Color color = Color.SteelBlue;
+            Color color = Color.FromArgb(216, 55, 150);
 
             if (_highlighted != null &&
                 node.Value == _highlighted)
@@ -344,7 +344,7 @@ namespace EST_Proyecto.Forms
         }
 
 
-        private void DrawBalanceFactor(Graphics g,NodeTree<int> node,AVLTree avl)
+        private void DrawBalanceFactor(Graphics g, NodeTree<int> node, AVLTree avl)
         {
             if (node == null)
                 return;
@@ -352,9 +352,9 @@ namespace EST_Proyecto.Forms
             Point p = positions[node];
             int bf = avl.GetBalance(node);
             using (Font f = new Font("Segoe UI", 7F))
-            using (Brush b = new SolidBrush(Color.Red))
+            using (Brush b = new SolidBrush(Color.FromArgb(0, 146, 255)))
             {
-                g.DrawString(bf.ToString(), f,b, p.X + 15,p.Y - 25);
+                g.DrawString(bf.ToString(), f, b, p.X + 15, p.Y - 25);
             }
 
             DrawBalanceFactor(g, node.Left, avl);
@@ -418,6 +418,11 @@ namespace EST_Proyecto.Forms
                 if (current.Right != null)
                     queue.Enqueue(current.Right);
             }
+        }
+
+        private void lblHeight_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

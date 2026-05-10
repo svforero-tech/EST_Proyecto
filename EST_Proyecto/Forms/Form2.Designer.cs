@@ -71,32 +71,38 @@
             // 
             // btnInsert
             // 
+            btnInsert.BackColor = Color.Plum;
+            btnInsert.ForeColor = Color.White;
             btnInsert.Location = new Point(20, 70);
             btnInsert.Name = "btnInsert";
             btnInsert.Size = new Size(94, 29);
             btnInsert.TabIndex = 2;
             btnInsert.Text = "Insertar";
-            btnInsert.UseVisualStyleBackColor = true;
+            btnInsert.UseVisualStyleBackColor = false;
             btnInsert.Click += btnInsert_Click;
             // 
             // btnRemove
             // 
+            btnRemove.BackColor = Color.Plum;
+            btnRemove.ForeColor = Color.White;
             btnRemove.Location = new Point(120, 70);
             btnRemove.Name = "btnRemove";
             btnRemove.Size = new Size(94, 29);
             btnRemove.TabIndex = 4;
             btnRemove.Text = "Eliminar";
-            btnRemove.UseVisualStyleBackColor = true;
+            btnRemove.UseVisualStyleBackColor = false;
             btnRemove.Click += btnRemove_Click;
             // 
             // btnContains
             // 
+            btnContains.BackColor = Color.Plum;
+            btnContains.ForeColor = Color.White;
             btnContains.Location = new Point(220, 70);
             btnContains.Name = "btnContains";
             btnContains.Size = new Size(94, 29);
             btnContains.TabIndex = 5;
             btnContains.Text = "Buscar";
-            btnContains.UseVisualStyleBackColor = true;
+            btnContains.UseVisualStyleBackColor = false;
             btnContains.Click += btnContains_Click;
             // 
             // lblResult
@@ -110,32 +116,38 @@
             // 
             // btnPreOrder
             // 
+            btnPreOrder.BackColor = Color.Plum;
+            btnPreOrder.ForeColor = Color.White;
             btnPreOrder.Location = new Point(20, 160);
             btnPreOrder.Name = "btnPreOrder";
             btnPreOrder.Size = new Size(94, 29);
             btnPreOrder.TabIndex = 7;
             btnPreOrder.Text = "PreOrder";
-            btnPreOrder.UseVisualStyleBackColor = true;
+            btnPreOrder.UseVisualStyleBackColor = false;
             btnPreOrder.Click += btnPreOrder_Click;
             // 
             // btnInOrder
             // 
+            btnInOrder.BackColor = Color.Plum;
+            btnInOrder.ForeColor = Color.White;
             btnInOrder.Location = new Point(120, 160);
             btnInOrder.Name = "btnInOrder";
             btnInOrder.Size = new Size(94, 29);
             btnInOrder.TabIndex = 8;
             btnInOrder.Text = "InOrder";
-            btnInOrder.UseVisualStyleBackColor = true;
+            btnInOrder.UseVisualStyleBackColor = false;
             btnInOrder.Click += btnInOrder_Click;
             // 
             // btnLevelOrder
             // 
+            btnLevelOrder.BackColor = Color.Plum;
+            btnLevelOrder.ForeColor = Color.White;
             btnLevelOrder.Location = new Point(20, 210);
             btnLevelOrder.Name = "btnLevelOrder";
             btnLevelOrder.Size = new Size(94, 29);
             btnLevelOrder.TabIndex = 9;
             btnLevelOrder.Text = "LevelOrder";
-            btnLevelOrder.UseVisualStyleBackColor = true;
+            btnLevelOrder.UseVisualStyleBackColor = false;
             btnLevelOrder.Click += btnLevelOrder_Click;
             // 
             // txtTraversal
@@ -148,52 +160,62 @@
             // 
             // btnHeight
             // 
+            btnHeight.BackColor = Color.Plum;
+            btnHeight.ForeColor = Color.White;
             btnHeight.Location = new Point(20, 360);
             btnHeight.Name = "btnHeight";
             btnHeight.Size = new Size(94, 29);
             btnHeight.TabIndex = 11;
             btnHeight.Text = "Altura";
-            btnHeight.UseVisualStyleBackColor = true;
+            btnHeight.UseVisualStyleBackColor = false;
             btnHeight.Click += btnHeight_Click;
             // 
             // btnCount
             // 
+            btnCount.BackColor = Color.Plum;
+            btnCount.ForeColor = Color.White;
             btnCount.Location = new Point(120, 360);
             btnCount.Name = "btnCount";
             btnCount.Size = new Size(94, 29);
             btnCount.TabIndex = 12;
             btnCount.Text = "Count";
-            btnCount.UseVisualStyleBackColor = true;
+            btnCount.UseVisualStyleBackColor = false;
             btnCount.Click += btnCount_Click;
             // 
             // btnMin
             // 
+            btnMin.BackColor = Color.Plum;
+            btnMin.ForeColor = Color.White;
             btnMin.Location = new Point(220, 360);
             btnMin.Name = "btnMin";
             btnMin.Size = new Size(94, 29);
             btnMin.TabIndex = 13;
             btnMin.Text = "Min";
-            btnMin.UseVisualStyleBackColor = true;
+            btnMin.UseVisualStyleBackColor = false;
             btnMin.Click += btnMin_Click;
             // 
             // btnMax
             // 
+            btnMax.BackColor = Color.Plum;
+            btnMax.ForeColor = Color.White;
             btnMax.Location = new Point(20, 410);
             btnMax.Name = "btnMax";
             btnMax.Size = new Size(94, 29);
             btnMax.TabIndex = 14;
             btnMax.Text = "Max";
-            btnMax.UseVisualStyleBackColor = true;
+            btnMax.UseVisualStyleBackColor = false;
             btnMax.Click += btnMax_Click;
             // 
             // btnClear
             // 
+            btnClear.BackColor = Color.Plum;
+            btnClear.ForeColor = Color.White;
             btnClear.Location = new Point(120, 410);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(94, 29);
             btnClear.TabIndex = 15;
             btnClear.Text = "Limpiar";
-            btnClear.UseVisualStyleBackColor = true;
+            btnClear.UseVisualStyleBackColor = false;
             btnClear.Click += btnClear_Click;
             // 
             // lblHeight
@@ -204,6 +226,7 @@
             lblHeight.Size = new Size(49, 20);
             lblHeight.TabIndex = 16;
             lblHeight.Text = "Altura";
+            lblHeight.Click += lblHeight_Click;
             // 
             // lblCount
             // 
@@ -261,6 +284,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1282, 653);
             Controls.Add(rbAVL);
             Controls.Add(rbBST);
