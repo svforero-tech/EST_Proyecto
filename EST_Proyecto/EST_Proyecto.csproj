@@ -6,6 +6,8 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>EST_Proyecto.Program</StartupObject>
+    <UseWPF>False</UseWPF>
   </PropertyGroup>
 
 </Project>

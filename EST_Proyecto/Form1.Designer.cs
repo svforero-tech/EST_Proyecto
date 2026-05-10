@@ -113,7 +113,6 @@
             StackA.Name = "StackA";
             StackA.Size = new Size(150, 104);
             StackA.TabIndex = 7;
-            StackA.SelectedIndexChanged += StackA_SelectedIndexChanged;
             // 
             // StackB
             // 

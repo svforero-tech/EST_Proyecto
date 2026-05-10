@@ -13,7 +13,7 @@ namespace EST_Proyecto
         }
         
 
-        public void PreOrder(NodeTree<int> node)
+        public void PreOrder(NodeTree<T> node)
         {
             if (node == null) return;
 
@@ -23,7 +23,7 @@ namespace EST_Proyecto
             throw new NotImplementedException();
         }
 
-        public void InOrder(NodeTree<int> node)
+        public void InOrder(NodeTree<T> node)
         {
             if (node == null) return;
 
@@ -33,7 +33,7 @@ namespace EST_Proyecto
             InOrder(node.Right);
         }
 
-        public void PostOrder(NodeTree<int> node)
+        public void PostOrder(NodeTree<T> node)
         {
             if (node == null) return;
 

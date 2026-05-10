@@ -7,28 +7,20 @@
       "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\forms\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\forms\\tree\\binarytree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\tree\\binarytree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\forms\\interfaces\\itree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\interfaces\\itree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\forms\\tree\\avltree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\tree\\avltree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\forms\\nodos\\nodetree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\nodos\\nodetree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\forms\\estructuras\\linkedlistastack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\estructuras\\linkedlistastack.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,19 +30,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Form1.cs",
-              "RelativeDocumentMoniker": "EST_Proyecto\\Form1.cs",
-              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Form1.cs",
-              "RelativeToolTip": "EST_Proyecto\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAwAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "BinaryTree.cs",
+              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Tree\\BinaryTree.cs",
+              "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Tree\\BinaryTree.cs",
+              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Tree\\BinaryTree.cs",
+              "RelativeToolTip": "EST_Proyecto\\Forms\\Tree\\BinaryTree.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAqwKAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T17:13:15.546Z"
+              "WhenOpened": "2026-05-10T21:16:10.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Program.cs",
+              "RelativeDocumentMoniker": "EST_Proyecto\\Program.cs",
+              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Program.cs",
+              "RelativeToolTip": "EST_Proyecto\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T21:05:15.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NodeTree.cs",
+              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Nodos\\NodeTree.cs",
+              "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Nodos\\NodeTree.cs",
+              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Nodos\\NodeTree.cs",
+              "RelativeToolTip": "EST_Proyecto\\Forms\\Nodos\\NodeTree.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T20:42:33.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form2.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Form2.cs",
+              "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Form2.cs",
+              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Form2.cs [Dise\u00F1o]",
+              "RelativeToolTip": "EST_Proyecto\\Forms\\Form2.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-10T19:26:49.335Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
@@ -60,72 +91,10 @@
               "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Form2.cs",
               "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Form2.cs",
               "RelativeToolTip": "EST_Proyecto\\Forms\\Form2.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAmwBcAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAA1wCkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-07T17:18:20.076Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AVLTree.cs",
-              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Tree\\AVLTree.cs",
-              "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Tree\\AVLTree.cs",
-              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Tree\\AVLTree.cs",
-              "RelativeToolTip": "EST_Proyecto\\Forms\\Tree\\AVLTree.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAL0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T14:55:23.304Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BinaryTree.cs",
-              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Tree\\BinaryTree.cs",
-              "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Tree\\BinaryTree.cs",
-              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Tree\\BinaryTree.cs",
-              "RelativeToolTip": "EST_Proyecto\\Forms\\Tree\\BinaryTree.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAqwAIBAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T13:39:53.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ITree.cs",
-              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Interfaces\\ITree.cs",
-              "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Interfaces\\ITree.cs",
-              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Interfaces\\ITree.cs",
-              "RelativeToolTip": "EST_Proyecto\\Forms\\Interfaces\\ITree.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA/wAgAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T13:26:28.265Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "NodeTree.cs",
-              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Nodos\\NodeTree.cs",
-              "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Nodos\\NodeTree.cs",
-              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Nodos\\NodeTree.cs",
-              "RelativeToolTip": "EST_Proyecto\\Forms\\Nodos\\NodeTree.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T13:31:05.672Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LinkedListaStack.cs",
-              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Estructuras\\LinkedListaStack.cs",
-              "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Estructuras\\LinkedListaStack.cs",
-              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Estructuras\\LinkedListaStack.cs",
-              "RelativeToolTip": "EST_Proyecto\\Forms\\Estructuras\\LinkedListaStack.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAD0AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T17:35:31.164Z"
             }
           ]
         }

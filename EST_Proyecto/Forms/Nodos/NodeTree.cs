@@ -1,7 +1,7 @@
 ﻿
 namespace EST_Proyecto
 {
-   class NodeTree<T>
+  public class NodeTree<T>
     {
         public T Value;
         public NodeTree<T> Left;

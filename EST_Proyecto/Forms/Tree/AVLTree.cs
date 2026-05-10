@@ -16,7 +16,7 @@ namespace EST_Proyecto.Forms.Tree
 
         // FACTOR DE BALANCE 
 
-        private int GetBalance(NodeTree<int> node)
+        public int GetBalance(NodeTree<int> node)
         {
             if (node == null)
                 return 0;
