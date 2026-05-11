@@ -94,120 +94,257 @@ namespace EST_Proyecto.Forms
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            int value = int.Parse(txtValue.Text);
-
-            if (tree is AVLTree avl)
+            try
             {
-                avl.Insert(value);
+                if (string.IsNullOrWhiteSpace(txtValue.Text))
+                {
+                    MessageBox.Show("Ingrese un valor.");
+                    return;
+                }
+
+                int value = int.Parse(txtValue.Text);
+
+                if (tree is AVLTree avl)
+                {
+                    avl.Insert(value);
+                }
+                else
+                {
+                    tree.Insert(value);
+                }
+
+                _highlighted = null;
+
+                ClearLabels();
+
+                panelTree.Invalidate();
             }
-            else
+            catch (FormatException)
             {
-                tree.Insert(value);
+                MessageBox.Show("Solo se permiten números.");
             }
-
-            _highlighted = null;
-            ClearLabels();
-
-            panelTree.Invalidate();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            int value = int.Parse(txtValue.Text);
-
-            if (tree is AVLTree avl)
+            try
             {
-                avl.Remove(value);
+                if (string.IsNullOrWhiteSpace(txtValue.Text))
+                {
+                    MessageBox.Show("Ingrese un valor.");
+
+                    return;
+                }
+
+                int value = int.Parse(txtValue.Text);
+
+                if (!tree.Contains(value))
+                {
+                    MessageBox.Show("El valor no existe.");
+
+                    return;
+                }
+
+                if (tree is AVLTree avl)
+                {
+                    avl.Remove(value);
+                }
+                else
+                {
+                    tree.Remove(value);
+                }
+
+                _highlighted = null;
+
+                ClearLabels();
+
+                panelTree.Invalidate();
             }
-            else
+            catch (FormatException)
             {
-                tree.Remove(value);
+                MessageBox.Show(
+                    "Solo se permiten números.");
             }
-
-            _highlighted = null;
-            ClearLabels();
-
-            panelTree.Invalidate();
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Error: " + ex.Message);
+            }
         }
 
         private void btnContains_Click(object sender, EventArgs e)
         {
-            int value = int.Parse(txtValue.Text);
-
-            bool exists = tree.Contains(value);
-
-            if (exists)
+            try
             {
-                lblResult.Text = "Sí existe";
+                if (string.IsNullOrWhiteSpace(txtValue.Text))
+                {
+                    MessageBox.Show("Ingrese un valor.");
 
-                _highlighted = value;
+                    return;
+                }
+
+                int value = int.Parse(txtValue.Text);
+
+                bool exists = tree.Contains(value);
+
+                if (exists)
+                {
+                    lblResult.Text = "Sí existe";
+
+                    _highlighted = value;
+                }
+                else
+                {
+                    lblResult.Text = "No existe";
+
+                    _highlighted = null;
+                }
+
+                panelTree.Invalidate();
             }
-            else
+            catch (FormatException)
             {
-                lblResult.Text = "No existe";
-
-                _highlighted = null;
+                MessageBox.Show(
+                    "Solo se permiten números.");
             }
-
-            panelTree.Invalidate();
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Error: " + ex.Message);
+            }
         }
 
         private void btnPreOrder_Click(object sender, EventArgs e)
         {
-            traversalResult = "";
+            try
+            {
+                traversalResult = "";
 
-            PreOrderString(tree.GetRoot());
+                PreOrderString(tree.GetRoot());
 
-            txtTraversal.Text = traversalResult;
+                txtTraversal.Text = traversalResult;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
 
         private void btnInOrder_Click(object sender, EventArgs e)
         {
-            traversalResult = "";
+            try
+            {
+                traversalResult = "";
 
-            InOrderString(tree.GetRoot());
+                InOrderString(tree.GetRoot());
 
-            txtTraversal.Text = traversalResult;
+                txtTraversal.Text = traversalResult;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Error: " + ex.Message);
+            }
         }
 
         private void btnLevelOrder_Click(object sender, EventArgs e)
         {
-            traversalResult = "";
+            try
+            {
+                traversalResult = "";
 
-            LevelOrderString();
+                LevelOrderString();
 
-            txtTraversal.Text = traversalResult;
+                txtTraversal.Text = traversalResult;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnHeight_Click(object sender, EventArgs e)
         {
-            lblHeight.Text = "Height: " + tree.Height();
+            try
+            {
+                lblHeight.Text = "Height: " + tree.Height();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnCount_Click(object sender, EventArgs e)
         {
-            lblCount.Text = "Count: " + tree.Count();
+            try
+            {
+                lblCount.Text ="Count: " + tree.Count();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnMin_Click(object sender, EventArgs e)
         {
-            lblMin.Text = "Min: " + tree.Min();
+            try
+            {
+                if (tree.IsEmpty())
+                {
+                    MessageBox.Show("El árbol está vacío.");
+
+                    return;
+                }
+
+                lblMin.Text = "Min: " + tree.Min();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnMax_Click(object sender, EventArgs e)
         {
-            lblMax.Text = "Max: " + tree.Max();
+            try
+            {
+                if (tree.IsEmpty())
+                {
+                    MessageBox.Show("El árbol está vacío.");
+
+                    return;
+                }
+
+                lblMax.Text = "Max: " + tree.Max();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            tree.Clear();
+            try
+            {
+                tree.Clear();
 
-            txtTraversal.Clear();
-            ClearLabels();
+                txtTraversal.Clear();
+                ClearLabels();
 
-            panelTree.Invalidate();
+                panelTree.Invalidate();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void rbBST_CheckedChanged(object sender, EventArgs e)
@@ -331,12 +468,7 @@ namespace EST_Proyecto.Forms
 
                 SizeF sz = g.MeasureString(text, f);
 
-                g.DrawString(
-                    text,
-                    f,
-                    tb,
-                    p.X - sz.Width / 2,
-                    p.Y - sz.Height / 2);
+                g.DrawString(text,f,tb,p.X - sz.Width / 2, p.Y - sz.Height / 2);
             }
 
             DrawNodes(g, node.Left);
