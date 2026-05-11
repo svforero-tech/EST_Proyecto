@@ -56,7 +56,7 @@
             panelTree.BorderStyle = BorderStyle.FixedSingle;
             panelTree.Location = new Point(400, 30);
             panelTree.Name = "panelTree";
-            panelTree.Size = new Size(850, 600);
+            panelTree.Size = new Size(899, 840);
             panelTree.TabIndex = 0;
             panelTree.Paint += panelTree_Paint;
             panelTree.MouseClick += panelTree_MouseClick;
@@ -285,7 +285,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1282, 653);
+            ClientSize = new Size(1311, 882);
             Controls.Add(rbAVL);
             Controls.Add(rbBST);
             Controls.Add(lblMax);
