@@ -1,7 +1,7 @@
 ﻿
 namespace EST_Proyecto
 {
-     class NodeDouble<T>
+     public class NodeDouble<T>
     {
         public T Data;
         public NodeDouble<T> Next;

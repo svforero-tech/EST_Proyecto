@@ -1,7 +1,7 @@
 ﻿
 namespace EST_Proyecto
 {
-        class LinkedListaQueue<T> : IQueue<T>
+        public class LinkedListaQueue<T> : IQueue<T>
         {
             public NodeDouble<T> front;
             public NodeDouble<T> rear;

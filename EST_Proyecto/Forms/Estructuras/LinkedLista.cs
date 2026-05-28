@@ -1,6 +1,6 @@
 ﻿namespace EST_Proyecto
 {
-    class LinkedLista<T> : ILista<T>
+    public class LinkedLista<T> : ILista<T>
     {
         private NodeDouble<T> head;
 

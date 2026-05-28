@@ -1,7 +1,7 @@
 ﻿
 namespace EST_Proyecto
 {
-        class LinkedListaStack<T> : IStack<T>
+        public class LinkedListaStack<T> : IStack<T>
         {
             private NodeDouble<T> top;
             private int size;
