@@ -423,7 +423,18 @@ namespace EST_Proyecto.Forms
 
         private void btnShowPath_Click(object sender, EventArgs e)
         {
-            int destination = Convert.ToInt32(txtDestination.Text);
+             int destination;
+            if (!int.TryParse(txtDestination.Text, out destination))
+            {
+            MessageBox.Show("Ingrese un número válido");
+            return;
+            }
+            
+            if (destination < 0 || destination >= graph.VerticesCount)
+            {
+            MessageBox.Show("Nodo fuera de rango");
+            return;
+            }
 
             if (double.IsPositiveInfinity(report.Distances[destination]))
             {
