@@ -160,6 +160,9 @@ namespace EST_Proyecto.Forms
                     int v = edge.Item2;
                     double w = edge.Item3;
 
+                    if (!positions.ConstainsKey(u) || !positions.ConstainsKey(v))
+                        continue;
+
                     PointF pu = positions[u];
                     PointF pv = positions[v];
 
