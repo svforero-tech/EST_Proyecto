@@ -35,7 +35,7 @@ namespace EST_Proyecto.Forms
             BuildSampleGraph();
 
             AssignPositionsCircular(
-                8,
+                graph.VerticesCount,
                 panelGraph.Width,
                 panelGraph.Height,
                 40
@@ -97,7 +97,7 @@ namespace EST_Proyecto.Forms
                 dijkstra.BuildShortestPaths(
                     graph,
                     currentSource,
-                    8
+                    graph.VerticesCount
                 );
         }
 
@@ -408,7 +408,7 @@ namespace EST_Proyecto.Forms
 
                     highlightedDestination = -1;
 
-                    report =  dijkstra.BuildShortestPaths( graph, currentSource, 8);
+                    report =  dijkstra.BuildShortestPaths( graph, currentSource, graph.VerticesCount );
 
                     panelGraph.Invalidate();
 
