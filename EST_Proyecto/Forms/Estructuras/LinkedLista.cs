@@ -143,7 +143,7 @@
 
             while (actualNode != null)
             {
-                if (Count == index -1)
+                if (Count == index)
                 {
                     return actualNode.Data;
                 }
@@ -155,14 +155,22 @@
 
         public int Count()//Cuenta la cantidad de nodos
         {
-            NodeDouble<T> actualNode = head; 
-            int Count = 1; 
-            while (actualNode.Next != null) 
+            if (head == null)
             {
-                Count++;
-                actualNode = actualNode.Next; 
+                return 0;
             }
-            return Count;
+
+            int count = 0;
+
+            NodeDouble<T> actualNode = head;
+
+            while (actualNode != null)
+            {
+                count++;
+                actualNode = actualNode.Next;
+            }
+
+            return count;
         }
 
         public void Clear()//Elimina todos los nodos

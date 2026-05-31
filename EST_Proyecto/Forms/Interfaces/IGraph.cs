@@ -6,6 +6,7 @@ namespace EST_Proyecto.Forms.Interfaces
 {
     public interface IGraph
     {
+        int VerticesCount { get; }
         // Agregar vértices
         void AgregarVertice(int id, string nombre);
 

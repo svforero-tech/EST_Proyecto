@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\forms\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\forms\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\forms\\interfaces\\igraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\interfaces\\igraph.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\forms\\estructuras\\graphs\\shortestpathreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\estructuras\\graphs\\shortestpathreport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\forms\\estructuras\\graphs\\dijkstra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\estructuras\\graphs\\dijkstra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\forms\\estructuras\\graphs\\graphlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\estructuras\\graphs\\graphlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\forms\\estructuras\\graphs\\graphmatrix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\estructuras\\graphs\\graphmatrix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\forms\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +38,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "IGraph.cs",
+              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Interfaces\\IGraph.cs",
+              "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Interfaces\\IGraph.cs",
+              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Interfaces\\IGraph.cs",
+              "RelativeToolTip": "EST_Proyecto\\Forms\\Interfaces\\IGraph.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAiwAgAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T00:06:30.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dijkstra.cs",
+              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Estructuras\\Graphs\\Dijkstra.cs",
+              "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Estructuras\\Graphs\\Dijkstra.cs",
+              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Estructuras\\Graphs\\Dijkstra.cs",
+              "RelativeToolTip": "EST_Proyecto\\Forms\\Estructuras\\Graphs\\Dijkstra.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAQwD8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T00:03:45.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ShortestPathReport.cs",
+              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Estructuras\\Graphs\\ShortestPathReport.cs",
+              "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Estructuras\\Graphs\\ShortestPathReport.cs",
+              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Estructuras\\Graphs\\ShortestPathReport.cs",
+              "RelativeToolTip": "EST_Proyecto\\Forms\\Estructuras\\Graphs\\ShortestPathReport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T23:54:02.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GraphMatrix.cs",
+              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Estructuras\\Graphs\\GraphMatrix.cs",
+              "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Estructuras\\Graphs\\GraphMatrix.cs",
+              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Estructuras\\Graphs\\GraphMatrix.cs",
+              "RelativeToolTip": "EST_Proyecto\\Forms\\Estructuras\\Graphs\\GraphMatrix.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAIwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T23:53:53.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GraphList.cs",
+              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Estructuras\\Graphs\\GraphList.cs",
+              "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Estructuras\\Graphs\\GraphList.cs",
+              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Estructuras\\Graphs\\GraphList.cs",
+              "RelativeToolTip": "EST_Proyecto\\Forms\\Estructuras\\Graphs\\GraphList.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAUwEgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T23:53:36.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Form3.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Form3.cs",
               "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Form3.cs",
@@ -34,16 +114,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Form3.cs",
               "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Form3.cs",
               "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Form3.cs",
               "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Form3.cs",
               "RelativeToolTip": "EST_Proyecto\\Forms\\Form3.cs",
-              "ViewState": "AgIAAFEBAAAAAAAAAAAIwGIBAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAFIBAAAAAAAAAADwv2IBAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T17:00:06.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-28T17:00:06.595Z"
             }
           ]
         }
