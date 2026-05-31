@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|c:\\users\\sara\\source\\repos\\est_proyecto\\est_proyecto\\forms\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D7A19DBC-FA41-1C7F-0A46-CEBCC4BC2DF3}|EST_Proyecto\\EST_Proyecto.csproj|solutionrelative:est_proyecto\\forms\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -38,11 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Program.cs",
+              "RelativeDocumentMoniker": "EST_Proyecto\\Program.cs",
+              "ToolTip": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Program.cs",
+              "RelativeToolTip": "EST_Proyecto\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-31T02:19:02.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "IGraph.cs",
               "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Interfaces\\IGraph.cs",
               "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Interfaces\\IGraph.cs",
@@ -54,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Dijkstra.cs",
               "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Estructuras\\Graphs\\Dijkstra.cs",
               "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Estructuras\\Graphs\\Dijkstra.cs",
@@ -66,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ShortestPathReport.cs",
               "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Estructuras\\Graphs\\ShortestPathReport.cs",
               "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Estructuras\\Graphs\\ShortestPathReport.cs",
@@ -78,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "GraphMatrix.cs",
               "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Estructuras\\Graphs\\GraphMatrix.cs",
               "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Estructuras\\Graphs\\GraphMatrix.cs",
@@ -90,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GraphList.cs",
               "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Estructuras\\Graphs\\GraphList.cs",
               "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Estructuras\\Graphs\\GraphList.cs",
@@ -102,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form3.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Form3.cs",
               "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Form3.cs",
@@ -114,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Form3.cs",
               "DocumentMoniker": "C:\\Users\\SARA\\source\\repos\\EST_Proyecto\\EST_Proyecto\\Forms\\Form3.cs",
               "RelativeDocumentMoniker": "EST_Proyecto\\Forms\\Form3.cs",

@@ -105,11 +105,7 @@ namespace EST_Proyecto.Forms
         // POSICIONES CIRCULARES
         // =====================================================
 
-        private void AssignPositionsCircular(
-            int n,
-            int width,
-            int height,
-            int margin)
+        private void AssignPositionsCircular( int n,int width, int height, int margin)
         {
             positions.Clear();
 
@@ -122,27 +118,15 @@ namespace EST_Proyecto.Forms
 
             float cy = height / 2f;
 
-            float r =
-                Math.Min(width, height) / 2f
-                - margin
-                - VERTEX_RADIUS;
+            float r = Math.Min(width, height) / 2f  - margin - VERTEX_RADIUS;
 
             for (int i = 0; i < n; i++)
             {
-                double angle =
-                    -Math.PI / 2
-                    + 2 * Math.PI * i / n;
+                double angle = -Math.PI / 2 + 2 * Math.PI * i / n;
+                float x =  cx + (float)(r * Math.Cos(angle));
+                float y = cy + (float)(r * Math.Sin(angle));
 
-                float x =
-                    cx +
-                    (float)(r * Math.Cos(angle));
-
-                float y =
-                    cy +
-                    (float)(r * Math.Sin(angle));
-
-                positions[i] =
-                    new PointF(x, y);
+                positions[i] = new PointF(x, y);
             }
         }
 
@@ -150,17 +134,13 @@ namespace EST_Proyecto.Forms
         // DIBUJAR
         // =====================================================
 
-        private void panelGraph_Paint(
-            object sender,
-            PaintEventArgs e)
+        private void panelGraph_Paint(object sender,PaintEventArgs e)
         {
             Graphics g = e.Graphics;
 
-            g.SmoothingMode =
-                SmoothingMode.AntiAlias;
+            g.SmoothingMode = SmoothingMode.AntiAlias;
 
             DrawEdges(g);
-
             DrawVertices(g);
         }
 
@@ -170,13 +150,9 @@ namespace EST_Proyecto.Forms
 
         private void DrawEdges(Graphics g)
         {
-            using (Pen pen =
-                new Pen(
-                    Color.FromArgb(120, 120, 120),
-                    2f))
+            using (Pen pen = new Pen(  Color.FromArgb(120, 120, 120), 2f))
             {
-                pen.CustomEndCap =
-                    new AdjustableArrowCap(5, 6);
+                pen.CustomEndCap = new AdjustableArrowCap(5, 6);
 
                 foreach (var edge in EnumerateEdges())
                 {
@@ -187,22 +163,11 @@ namespace EST_Proyecto.Forms
                     PointF pu = positions[u];
                     PointF pv = positions[v];
 
-                    PointF a =
-                        Shrink(
-                            pu,
-                            pv,
-                            VERTEX_RADIUS + 2
-                        );
+                    PointF a = Shrink( pu,pv, VERTEX_RADIUS + 2 );
 
-                    PointF b =
-                        Shrink(
-                            pv,
-                            pu,
-                            VERTEX_RADIUS + 2
-                        );
+                    PointF b = Shrink( pv, pu, VERTEX_RADIUS + 2);
 
-                    bool highlighted =
-                        IsEdgeInShortestPath(u, v);
+                    bool highlighted = IsEdgeInShortestPath(u, v);
 
                     if (highlighted)
                     {
@@ -211,53 +176,22 @@ namespace EST_Proyecto.Forms
                     }
                     else
                     {
-                        pen.Color =
-                            Color.LightGray;
-
+                        pen.Color = Color.LightGray;
                         pen.Width = 2f;
                     }
 
-                    g.DrawLine(
-                        pen,
-                        a,
-                        b
-                    );
+                    g.DrawLine(pen, a, b );
 
-                    PointF mid =
-                        new PointF(
-                            (a.X + b.X) / 2f,
-                            (a.Y + b.Y) / 2f
-                        );
+                    PointF mid =  new PointF((a.X + b.X) / 2f, (a.Y + b.Y) / 2f);
 
-                    using (Font fw =
-                        new Font(
-                            "Segoe UI",
-                            8f,
-                            FontStyle.Regular))
-                    using (Brush bw =
-                        new SolidBrush(
-                            Color.FromArgb(
-                                60,
-                                60,
-                                60)))
+                    using (Font fw = new Font("Segoe UI",8f,FontStyle.Regular))
+                    using (Brush bw = new SolidBrush(Color.FromArgb(60,60,60)))
                     {
-                        string txt =
-                            w.ToString();
+                        string txt =w.ToString();
 
-                        SizeF sz =
-                            g.MeasureString(
-                                txt,
-                                fw
-                            );
+                        SizeF sz =g.MeasureString( txt,fw);
 
-                        g.DrawString(
-                            txt,
-                            fw,
-                            bw,
-                            mid.X -
-                            sz.Width / 2,
-                            mid.Y -
-                            sz.Height / 2
+                        g.DrawString( txt,fw,bw,mid.X -sz.Width / 2,mid.Y - sz.Height / 2
                         );
                     }
                 }
@@ -276,55 +210,29 @@ namespace EST_Proyecto.Forms
 
                 PointF p = kv.Value;
 
-                RectangleF rect =
-                    new RectangleF(
-                        p.X - VERTEX_RADIUS,
-                        p.Y - VERTEX_RADIUS,
-                        VERTEX_RADIUS * 2,
-                        VERTEX_RADIUS * 2
-                    );
+                RectangleF rect = new RectangleF( p.X - VERTEX_RADIUS, p.Y - VERTEX_RADIUS,VERTEX_RADIUS * 2,
+                        VERTEX_RADIUS * 2 );
 
-                Color fillColor =
-                    ColorForVertex(id);
+                Color fillColor =ColorForVertex(id);
 
-                using (Brush fill =
-                    new SolidBrush(fillColor))
+                using (Brush fill = new SolidBrush(fillColor))
                 {
                     g.FillEllipse(fill, rect);
                 }
 
-                using (Pen border =
-                    new Pen(
-                        Color.FromArgb(40, 40, 40),
-                        1.5f))
+                using (Pen border =new Pen(Color.FromArgb(40, 40, 40),1.5f))
                 {
                     g.DrawEllipse(border, rect);
                 }
 
-                using (Font f =
-                    new Font(
-                        "Segoe UI",
-                        10f,
-                        FontStyle.Bold))
-                using (Brush tb =
-                    new SolidBrush(Color.White))
+                using (Font f = new Font( "Segoe UI", 10f,FontStyle.Bold))
+                using (Brush tb = new SolidBrush(Color.White))
                 {
-                    string text =
-                        id.ToString();
+                    string text = id.ToString();
 
-                    SizeF sz =
-                        g.MeasureString(
-                            text,
-                            f
-                        );
+                    SizeF sz = g.MeasureString( text, f);
 
-                    g.DrawString(
-                        text,
-                        f,
-                        tb,
-                        p.X - sz.Width / 2,
-                        p.Y - sz.Height / 2
-                    );
+                    g.DrawString(text, f, tb, p.X - sz.Width / 2, p.Y - sz.Height / 2);
                 }
 
                 DrawDistanceLabel(g, id, p);
@@ -348,19 +256,10 @@ namespace EST_Proyecto.Forms
                 text = report.Distances[id].ToString();
             }
 
-            using (Font f =
-                new Font(
-                    "Segoe UI",
-                    8f))
+            using (Font f = new Font("Segoe UI", 8f))
             using (Brush b =  new SolidBrush(Color.Black))
             {
-                g.DrawString(
-                    text,
-                    f,
-                    b,
-                    p.X + 25,
-                    p.Y - 5
-                );
+                g.DrawString(text, f, b, p.X + 25, p.Y - 5);
             }
         }
 
@@ -409,20 +308,14 @@ namespace EST_Proyecto.Forms
             return false;
         }
 
-        private bool IsEdgeInShortestPath(
-            int u,
-            int v)
+        private bool IsEdgeInShortestPath( int u,int v)
         {
             if (highlightedDestination == -1)
             {
                 return false;
             }
 
-            LinkedListaStack<int> path =
-                dijkstra.RebuildPath(
-                    highlightedDestination,
-                    report.Previous
-                );
+            LinkedListaStack<int> path =dijkstra.RebuildPath(highlightedDestination,report.Previous);
 
             if (path.IsEmpty())
             {
@@ -435,8 +328,7 @@ namespace EST_Proyecto.Forms
             {
                 int current = path.Pop();
 
-                if (previous == u
-                    && current == v)
+                if (previous == u && current == v)
                 {
                     return true;
                 }
@@ -454,17 +346,13 @@ namespace EST_Proyecto.Forms
         private IEnumerable<(int, int, double)>
             EnumerateEdges()
         {
-            for (int u = 0; u < 8; u++)
+            for (int u = 0; u < graph.VerticesCount; u++)
             {
-                foreach (int v
-                         in graph.ObtenerVecinos(u))
+                foreach (int v in graph.ObtenerVecinos(u))
                 {
                     double w;
 
-                    if (graph.TryObtenerPeso(
-                        u,
-                        v,
-                        out w))
+                    if (graph.TryObtenerPeso(u, v, out w))
                     {
                         yield return (u, v, w);
                     }
@@ -477,17 +365,11 @@ namespace EST_Proyecto.Forms
         // =====================================================
 
         private static PointF Shrink(
-            PointF p1,
-            PointF p2,
-            float shrink)
+            PointF p1, PointF p2,float shrink)
         {
             float dx = p2.X - p1.X;
-
             float dy = p2.Y - p1.Y;
-
-            float len =
-                (float)Math.Sqrt(
-                    dx * dx + dy * dy);
+            float len = (float)Math.Sqrt(dx * dx + dy * dy);
 
             if (len <= shrink)
             {
