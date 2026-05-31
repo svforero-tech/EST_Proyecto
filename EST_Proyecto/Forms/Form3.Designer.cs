@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             panelGraph = new Panel();
+            btnShowPath = new Button();
             txtDestination = new TextBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // panelGraph
@@ -40,6 +42,16 @@
             panelGraph.Size = new Size(1164, 662);
             panelGraph.TabIndex = 0;
             // 
+            // btnShowPath
+            // 
+            btnShowPath.Location = new Point(978, 24);
+            btnShowPath.Name = "btnShowPath";
+            btnShowPath.Size = new Size(133, 59);
+            btnShowPath.TabIndex = 0;
+            btnShowPath.Text = "Mostrar camino";
+            btnShowPath.UseVisualStyleBackColor = true;
+            btnShowPath.Click += btnShowPath_Click;
+            // 
             // txtDestination
             // 
             txtDestination.Location = new Point(830, 40);
@@ -47,11 +59,22 @@
             txtDestination.Size = new Size(100, 27);
             txtDestination.TabIndex = 1;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(365, 43);
+            label1.Name = "label1";
+            label1.Size = new Size(448, 20);
+            label1.TabIndex = 2;
+            label1.Text = "Seleccione un nodo y luego ingrese un número para ver su camino";
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1355, 785);
+            Controls.Add(label1);
+            Controls.Add(btnShowPath);
             Controls.Add(txtDestination);
             Controls.Add(panelGraph);
             Name = "Form3";
@@ -64,5 +87,7 @@
 
         private Panel panelGraph;
         private TextBox txtDestination;
+        private Button btnShowPath;
+        private Label label1;
     }
 }

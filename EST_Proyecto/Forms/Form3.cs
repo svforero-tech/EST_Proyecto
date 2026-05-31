@@ -23,6 +23,7 @@ namespace EST_Proyecto.Forms
         private ShortestPathReport report;
         private int currentSource = 0;
         private int highlightedDestination = -1;
+        private LinkedListaStack<int> highlightedPath;
 
         public Form3()
         {
@@ -31,6 +32,7 @@ namespace EST_Proyecto.Forms
             SetDoubleBuffered(panelGraph);
 
             dijkstra = new Dijkstra();
+            highlightedPath = new LinkedListaStack<int>();
 
             BuildSampleGraph();
 
@@ -44,6 +46,7 @@ namespace EST_Proyecto.Forms
             panelGraph.Paint += panelGraph_Paint;
 
             panelGraph.MouseClick += panelGraph_MouseClick;
+            panelGraph.Resize += panelGraph_Resize;
         }
 
         // =====================================================
@@ -52,14 +55,11 @@ namespace EST_Proyecto.Forms
 
         private void SetDoubleBuffered(Panel panel)
         {
-            typeof(Panel).InvokeMember(
-                "DoubleBuffered",
+            typeof(Panel).InvokeMember("DoubleBuffered",
                 BindingFlags.SetProperty |
                 BindingFlags.Instance |
                 BindingFlags.NonPublic,
-                null,
-                panel,
-                new object[] { true }
+                null, panel, new object[] { true }
             );
         }
 
@@ -85,13 +85,21 @@ namespace EST_Proyecto.Forms
             graph.AgregarArista(1, 2, 5);
             graph.AgregarArista(1, 3, 10);
 
-            graph.AgregarArista(2, 4, 3);
+            graph.AgregarArista(2, 1, 1);
+            graph.AgregarArista(2, 3, 8);
+            graph.AgregarArista(2, 4, 2);
 
-            graph.AgregarArista(4, 3, 4);
+            graph.AgregarArista(3, 5, 6);
+            graph.AgregarArista(3, 6, 11);
 
-            graph.AgregarArista(3, 5, 11);
+            graph.AgregarArista(4, 3, 2);
+            graph.AgregarArista(4, 5, 9);
+            graph.AgregarArista(4, 6, 7);
 
-            graph.AgregarArista(4, 5, 5);
+            graph.AgregarArista(5, 7, 3);
+
+            graph.AgregarArista(6, 5, 1);
+            graph.AgregarArista(6, 7, 4);
 
             report =
                 dijkstra.BuildShortestPaths(
@@ -105,7 +113,7 @@ namespace EST_Proyecto.Forms
         // POSICIONES CIRCULARES
         // =====================================================
 
-        private void AssignPositionsCircular( int n,int width, int height, int margin)
+        private void AssignPositionsCircular(int n, int width, int height, int margin)
         {
             positions.Clear();
 
@@ -118,12 +126,12 @@ namespace EST_Proyecto.Forms
 
             float cy = height / 2f;
 
-            float r = Math.Min(width, height) / 2f  - margin - VERTEX_RADIUS;
+            float r = Math.Min(width, height) / 2f - margin - VERTEX_RADIUS;
 
             for (int i = 0; i < n; i++)
             {
                 double angle = -Math.PI / 2 + 2 * Math.PI * i / n;
-                float x =  cx + (float)(r * Math.Cos(angle));
+                float x = cx + (float)(r * Math.Cos(angle));
                 float y = cy + (float)(r * Math.Sin(angle));
 
                 positions[i] = new PointF(x, y);
@@ -134,7 +142,7 @@ namespace EST_Proyecto.Forms
         // DIBUJAR
         // =====================================================
 
-        private void panelGraph_Paint(object sender,PaintEventArgs e)
+        private void panelGraph_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
 
@@ -150,7 +158,7 @@ namespace EST_Proyecto.Forms
 
         private void DrawEdges(Graphics g)
         {
-            using (Pen pen = new Pen(  Color.FromArgb(120, 120, 120), 2f))
+            using (Pen pen = new Pen(Color.FromArgb(120, 120, 120), 2f))
             {
                 pen.CustomEndCap = new AdjustableArrowCap(5, 6);
 
@@ -160,15 +168,15 @@ namespace EST_Proyecto.Forms
                     int v = edge.Item2;
                     double w = edge.Item3;
 
-                    if (!positions.ConstainsKey(u) || !positions.ConstainsKey(v))
+                    if (!positions.ContainsKey(u) || !positions.ContainsKey(v))
                         continue;
 
                     PointF pu = positions[u];
                     PointF pv = positions[v];
 
-                    PointF a = Shrink( pu,pv, VERTEX_RADIUS + 2 );
+                    PointF a = Shrink(pu, pv, VERTEX_RADIUS + 2);
 
-                    PointF b = Shrink( pv, pu, VERTEX_RADIUS + 2);
+                    PointF b = Shrink(pv, pu, VERTEX_RADIUS + 2);
 
                     bool highlighted = IsEdgeInShortestPath(u, v);
 
@@ -183,18 +191,18 @@ namespace EST_Proyecto.Forms
                         pen.Width = 2f;
                     }
 
-                    g.DrawLine(pen, a, b );
+                    g.DrawLine(pen, a, b);
 
-                    PointF mid =  new PointF((a.X + b.X) / 2f, (a.Y + b.Y) / 2f);
+                    PointF mid = new PointF((a.X + b.X) / 2f, (a.Y + b.Y) / 2f);
 
-                    using (Font fw = new Font("Segoe UI",8f,FontStyle.Regular))
-                    using (Brush bw = new SolidBrush(Color.FromArgb(60,60,60)))
+                    using (Font fw = new Font("Segoe UI", 8f, FontStyle.Regular))
+                    using (Brush bw = new SolidBrush(Color.FromArgb(60, 60, 60)))
                     {
-                        string txt =w.ToString();
+                        string txt = w.ToString();
 
-                        SizeF sz =g.MeasureString( txt,fw);
+                        SizeF sz = g.MeasureString(txt, fw);
 
-                        g.DrawString( txt,fw,bw,mid.X -sz.Width / 2,mid.Y - sz.Height / 2
+                        g.DrawString(txt, fw, bw, mid.X - sz.Width / 2, mid.Y - sz.Height / 2
                         );
                     }
                 }
@@ -213,27 +221,27 @@ namespace EST_Proyecto.Forms
 
                 PointF p = kv.Value;
 
-                RectangleF rect = new RectangleF( p.X - VERTEX_RADIUS, p.Y - VERTEX_RADIUS,VERTEX_RADIUS * 2,
-                        VERTEX_RADIUS * 2 );
+                RectangleF rect = new RectangleF(p.X - VERTEX_RADIUS, p.Y - VERTEX_RADIUS, VERTEX_RADIUS * 2,
+                        VERTEX_RADIUS * 2);
 
-                Color fillColor =ColorForVertex(id);
+                Color fillColor = ColorForVertex(id);
 
                 using (Brush fill = new SolidBrush(fillColor))
                 {
                     g.FillEllipse(fill, rect);
                 }
 
-                using (Pen border =new Pen(Color.FromArgb(40, 40, 40),1.5f))
+                using (Pen border = new Pen(Color.FromArgb(40, 40, 40), 1.5f))
                 {
                     g.DrawEllipse(border, rect);
                 }
 
-                using (Font f = new Font( "Segoe UI", 10f,FontStyle.Bold))
+                using (Font f = new Font("Segoe UI", 10f, FontStyle.Bold))
                 using (Brush tb = new SolidBrush(Color.White))
                 {
                     string text = id.ToString();
 
-                    SizeF sz = g.MeasureString( text, f);
+                    SizeF sz = g.MeasureString(text, f);
 
                     g.DrawString(text, f, tb, p.X - sz.Width / 2, p.Y - sz.Height / 2);
                 }
@@ -248,6 +256,10 @@ namespace EST_Proyecto.Forms
 
         private void DrawDistanceLabel(Graphics g, int id, PointF p)
         {
+            if (report == null)
+            {
+                return;
+            }
             string text;
 
             if (double.IsPositiveInfinity(report.Distances[id]))
@@ -256,11 +268,11 @@ namespace EST_Proyecto.Forms
             }
             else
             {
-                text = report.Distances[id].ToString();
+                text = report.Distances[id].ToString("0.##");
             }
 
             using (Font f = new Font("Segoe UI", 8f))
-            using (Brush b =  new SolidBrush(Color.Black))
+            using (Brush b = new SolidBrush(Color.Black))
             {
                 g.DrawString(text, f, b, p.X + 25, p.Y - 5);
             }
@@ -296,7 +308,7 @@ namespace EST_Proyecto.Forms
                 return false;
             }
 
-            LinkedListaStack<int> path =dijkstra.RebuildPath(highlightedDestination,report.Previous);
+            LinkedListaStack<int> path = dijkstra.RebuildPath(highlightedDestination, report.Previous);
 
             while (!path.IsEmpty())
             {
@@ -311,14 +323,14 @@ namespace EST_Proyecto.Forms
             return false;
         }
 
-        private bool IsEdgeInShortestPath( int u,int v)
+        private bool IsEdgeInShortestPath(int u, int v)
         {
             if (highlightedDestination == -1)
             {
                 return false;
             }
 
-            LinkedListaStack<int> path =dijkstra.RebuildPath(highlightedDestination,report.Previous);
+            LinkedListaStack<int> path = dijkstra.RebuildPath(highlightedDestination, report.Previous);
 
             if (path.IsEmpty())
             {
@@ -368,7 +380,7 @@ namespace EST_Proyecto.Forms
         // =====================================================
 
         private static PointF Shrink(
-            PointF p1, PointF p2,float shrink)
+            PointF p1, PointF p2, float shrink)
         {
             float dx = p2.X - p1.X;
             float dy = p2.Y - p1.Y;
@@ -403,15 +415,16 @@ namespace EST_Proyecto.Forms
 
                 float dy = e.Y - p.Y;
 
-                float dist =(float)Math.Sqrt(dx * dx + dy * dy);
+                float dist = (float)Math.Sqrt(dx * dx + dy * dy);
 
                 if (dist < VERTEX_RADIUS)
                 {
                     currentSource = id;
 
                     highlightedDestination = -1;
+                    highlightedPath = new LinkedListaStack<int>();
 
-                    report =  dijkstra.BuildShortestPaths( graph, currentSource, graph.VerticesCount );
+                    report = dijkstra.BuildShortestPaths(graph, currentSource, graph.VerticesCount);
 
                     panelGraph.Invalidate();
 
@@ -426,17 +439,17 @@ namespace EST_Proyecto.Forms
 
         private void btnShowPath_Click(object sender, EventArgs e)
         {
-             int destination;
+            int destination;
             if (!int.TryParse(txtDestination.Text, out destination))
             {
-            MessageBox.Show("Ingrese un número válido");
-            return;
+                MessageBox.Show("Ingrese un número válido");
+                return;
             }
-            
+
             if (destination < 0 || destination >= graph.VerticesCount)
             {
-            MessageBox.Show("Nodo fuera de rango");
-            return;
+                MessageBox.Show("Nodo fuera de rango");
+                return;
             }
 
             if (double.IsPositiveInfinity(report.Distances[destination]))
@@ -447,9 +460,30 @@ namespace EST_Proyecto.Forms
             }
             else
             {
-                highlightedDestination =  destination;
+                highlightedDestination = destination;
+
+                highlightedPath =
+                    dijkstra.RebuildPath(
+                        destination,
+                        report.Previous
+                    );
             }
             panelGraph.Invalidate();
         }
+
+        private void panelGraph_Resize(
+    object sender,
+    EventArgs e)
+        {
+            AssignPositionsCircular(
+                graph.VerticesCount,
+                panelGraph.Width,
+                panelGraph.Height,
+                40
+            );
+
+            panelGraph.Invalidate();
+        }
+
     }
 }

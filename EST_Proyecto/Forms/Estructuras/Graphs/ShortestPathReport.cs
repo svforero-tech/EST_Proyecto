@@ -24,11 +24,21 @@ namespace EST_Proyecto.Forms.Estructuras.Graphs
     {
         public int ExtractedVertex;
 
+        public double[] Distances;
+
+        public int[] Previous;
+
         public LinkedListaQueue<RelaxationStep> Relaxations;
 
-        public TraceSnapshot(int extractedVertex)
+        public TraceSnapshot(
+            int extractedVertex,
+            double[] distances,
+            int[] previous)
         {
             ExtractedVertex = extractedVertex;
+
+            Distances = distances;
+            Previous = previous;
 
             Relaxations = new LinkedListaQueue<RelaxationStep>();
         }

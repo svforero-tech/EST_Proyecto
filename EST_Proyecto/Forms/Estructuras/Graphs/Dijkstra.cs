@@ -39,10 +39,15 @@ namespace EST_Proyecto.Forms.Estructuras.Graphs
 
                 visited[u] = true;
 
-                TraceSnapshot snapshot = new TraceSnapshot(u);
+                TraceSnapshot snapshot = new TraceSnapshot(u,(double[])dist.Clone(),(int[])prev.Clone());
 
                 foreach (int neighbor in graph.ObtenerVecinos(u))
                 {
+                    if (visited[neighbor])
+                    {
+                        continue;
+                    }
+
                     double weight;
 
                     if (graph.TryObtenerPeso( u, neighbor, out weight))
