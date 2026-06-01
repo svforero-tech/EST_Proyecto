@@ -48,7 +48,7 @@
             btnShowPath.Name = "btnShowPath";
             btnShowPath.Size = new Size(133, 59);
             btnShowPath.TabIndex = 0;
-            btnShowPath.Text = "Mostrar camino";
+            btnShowPath.Text = "Mostrar camino más corto";
             btnShowPath.UseVisualStyleBackColor = true;
             btnShowPath.Click += btnShowPath_Click;
             // 
@@ -62,11 +62,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(365, 43);
+            label1.Location = new Point(490, 43);
             label1.Name = "label1";
-            label1.Size = new Size(448, 20);
+            label1.Size = new Size(317, 20);
             label1.TabIndex = 2;
-            label1.Text = "Seleccione un nodo y luego ingrese un número para ver su camino";
+            label1.Text = "Seleccione un nodo y luego ingrese un destino";
             // 
             // Form3
             // 

@@ -73,8 +73,7 @@ namespace EST_Proyecto.Forms
 
             lblInfo.Font = new Font("Segoe UI", 9);
 
-            lblInfo.Text =
-                "Seleccione un destino";
+            lblInfo.Text = "Destino aún no ingresado";
 
             gbInfo.Controls.Add(lblInfo);
 
