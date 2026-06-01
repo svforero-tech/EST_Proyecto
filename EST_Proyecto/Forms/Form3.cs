@@ -24,10 +24,17 @@ namespace EST_Proyecto.Forms
         private int currentSource = 0;
         private int highlightedDestination = -1;
         private LinkedListaStack<int> highlightedPath;
+        private Label lblInfo;
+        private GroupBox gbInfo;
+
+        private GroupBox gbLegend;
 
         public Form3()
         {
             InitializeComponent();
+
+            CreateInfoPanel();
+            CreateLegendPanel();
 
             SetDoubleBuffered(panelGraph);
 
@@ -49,6 +56,73 @@ namespace EST_Proyecto.Forms
             panelGraph.Resize += panelGraph_Resize;
         }
 
+        private void CreateInfoPanel()
+        {
+            gbInfo = new GroupBox();
+
+            gbInfo.Text = "Información";
+            gbInfo.Width = 180;
+            gbInfo.Height = 200;
+
+            gbInfo.Location = new Point(20, 118);
+
+            lblInfo = new Label();
+
+            lblInfo.AutoSize = false;
+            lblInfo.Dock = DockStyle.Fill;
+
+            lblInfo.Font = new Font("Segoe UI", 9);
+
+            lblInfo.Text =
+                "Seleccione un destino";
+
+            gbInfo.Controls.Add(lblInfo);
+
+            Controls.Add(gbInfo);
+        }
+
+        private void CreateLegendPanel()
+        {
+            gbLegend = new GroupBox();
+
+            gbLegend.Text = "Leyenda";
+
+            gbLegend.Width = 130;
+            gbLegend.Height = 120;
+
+            gbLegend.Location = new Point(15, 360);
+
+            AddLegendItem(Color.DodgerBlue, "Origen", 20);
+            AddLegendItem(Color.Red, "Destino", 50);
+            AddLegendItem(Color.Orange, "Camino", 80);
+
+            Controls.Add(gbLegend);
+        }
+
+        private void AddLegendItem(Color color,
+                           string text,
+                           int y)
+        {
+            Panel p = new Panel();
+
+            p.BackColor = color;
+
+            p.Width = 15;
+            p.Height = 15;
+
+            p.Location = new Point(10, y);
+
+            Label lbl = new Label();
+
+            lbl.Text = text;
+
+            lbl.AutoSize = true;
+
+            lbl.Location = new Point(35, y - 1);
+
+            gbLegend.Controls.Add(p);
+            gbLegend.Controls.Add(lbl);
+        }
         // =====================================================
         // DOUBLE BUFFER
         // =====================================================
@@ -183,7 +257,7 @@ namespace EST_Proyecto.Forms
                     if (highlighted)
                     {
                         pen.Color = Color.Gold;
-                        pen.Width = 4f;
+                        pen.Width = 6f;
                     }
                     else
                     {
@@ -202,8 +276,26 @@ namespace EST_Proyecto.Forms
 
                         SizeF sz = g.MeasureString(txt, fw);
 
-                        g.DrawString(txt, fw, bw, mid.X - sz.Width / 2, mid.Y - sz.Height / 2
+                        RectangleF fondoPeso =
+                            new RectangleF(
+                                mid.X - sz.Width / 2 - 2,
+                                mid.Y - sz.Height / 2 - 2,
+                                sz.Width + 4,
+                                sz.Height + 4
+                            );
+
+                        g.FillRectangle(
+                            Brushes.White,
+                            fondoPeso
                         );
+
+                        g.DrawString(
+                            txt,
+                            fw,
+                            bw,
+                            mid.X - sz.Width / 2,
+                            mid.Y - sz.Height / 2
+                                                );
                     }
                 }
             }
@@ -284,6 +376,11 @@ namespace EST_Proyecto.Forms
 
         private Color ColorForVertex(int id)
         {
+            if (id == highlightedDestination)
+            {
+                return Color.Red;
+            }
+
             if (id == currentSource)
             {
                 return Color.DodgerBlue;
@@ -420,6 +517,7 @@ namespace EST_Proyecto.Forms
                 if (dist < VERTEX_RADIUS)
                 {
                     currentSource = id;
+                    lblInfo.Text = "Seleccione un destino";
 
                     highlightedDestination = -1;
                     highlightedPath = new LinkedListaStack<int>();
@@ -467,8 +565,45 @@ namespace EST_Proyecto.Forms
                         destination,
                         report.Previous
                     );
+
+                UpdateInfo(destination);
             }
             panelGraph.Invalidate();
+        }
+
+        private void UpdateInfo(int destination)
+        {
+            LinkedListaStack<int> path =
+                dijkstra.RebuildPath(
+                    destination,
+                    report.Previous
+                );
+
+            string camino = "";
+
+            bool first = true;
+
+            while (!path.IsEmpty())
+            {
+                int v = path.Pop();
+
+                if (!first)
+                {
+                    camino += " → ";
+                }
+
+                camino += v;
+
+                first = false;
+            }
+
+            lblInfo.Text =
+                "Origen: " + currentSource +
+                "\n\nDestino: " + destination +
+                "\n\nCosto Total: " +
+                report.Distances[destination] +
+                "\n\nCamino:\n" +
+                camino;
         }
 
         private void panelGraph_Resize(

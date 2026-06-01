@@ -37,9 +37,9 @@
             // panelGraph
             // 
             panelGraph.BorderStyle = BorderStyle.FixedSingle;
-            panelGraph.Location = new Point(159, 118);
+            panelGraph.Location = new Point(301, 109);
             panelGraph.Name = "panelGraph";
-            panelGraph.Size = new Size(1164, 662);
+            panelGraph.Size = new Size(1012, 664);
             panelGraph.TabIndex = 0;
             // 
             // btnShowPath
